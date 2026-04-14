@@ -635,3 +635,14 @@ document.querySelectorAll('.view').forEach(v=>v.classList.remove('act'));
 document.getElementById('home-v').classList.add('act');
 ['u1','u2','u3','u4','u5','u6'].forEach(u=>initQuiz(u));
 </script></body></html>
+<script>
+window.onload = function() {
+  try {
+    if (typeof setMode === "function") {
+      setMode('u2','all');
+    }
+  } catch(e) {
+    console.log("Quiz auto-start error:", e);
+  }
+};
+</script>
